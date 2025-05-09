@@ -3,7 +3,6 @@ const imgAprovado = '<img src="./aprovado.png" alt="Emoji feliz" />';
 const imgReprovado = '<img src="./reprovado.png" alt="Emoji decepcionado" />';
 const atividades = [];
 const notas = [];
-
 let linhas = '';
 
 form.addEventListener('submit', function (e) {
@@ -41,7 +40,7 @@ function atualizaTabela() {
 function atualizaMediaFinal() {
     const mediaFinal = calculaMediaFinal();
 
-    document.getElementById('media-final-valor').innerHTML = mediaFinal;
+    document.getElementById('media-final-valor').innerHTML = mediaFinal.toFixed(2);
     document.getElementById('media-final-resultado').innerHTML = mediaFinal >= 7 ? 'Aprovado' : 'Reprovado';
 }
 
